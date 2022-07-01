@@ -6,13 +6,12 @@
   "private": true,
   "scripts": {
     "build": "webpack --config webpack.prod.js",
-    "start:dev": "webpack serve --open --config webpack.dev.js --hot"
+    "start:dev": "webpack serve --open --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/mr-ema/react-ts-template"
   },
-  "author": "Emanuel Vargas",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.6",
@@ -21,8 +20,10 @@
     "@babel/plugin-transform-runtime": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
     "@babel/preset-react": "^7.18.6",
+    "@types/node": "^18.0.3",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
+    "@types/webpack-env": "^1.17.0",
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",

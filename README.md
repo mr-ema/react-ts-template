@@ -1,14 +1,10 @@
-# React Typescript Template 
+# Welcome To WRT
 
-- This is a template of React using Typescript, webpack and babel.
-- This run with webpackServer.
-
+A Webpack + React + Typescript Template.
 ## Installation
 
-Go To Your Project Dir And Run:
-
 ```bash
-  git clone git@github.com:mr-ema/react-ts-template.git .
+git clone https://github.com/mr-ema/react-ts-template.git
 ```
 
 
@@ -29,4 +25,4 @@ npm run start:dev
 npm run build
 ```
 
-- You can runned with a custom server or use VsCode Live Server extension 
+- You can runned with your custom server or use VsCode Live Server extension

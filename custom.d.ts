@@ -1,5 +1,5 @@
-//  Declare Here Your Assets Files ( .jpg | .png | .svg )
-// * You Have To Declare Them In Webpack.common.js Too with 'assets loader'
+// * Declare Here Your Assets Files ( .jpg | .png | .svg )
+// * You Have To Declare Them In Webpack.common.js Too 
 
 /* declare module '*.jpg' {
   const content: any;

@@ -5,6 +5,8 @@
 
 # production
 /build
+.build
+.dist
 /dist
 
 # misc

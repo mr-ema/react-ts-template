@@ -1,4 +1,3 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -6,21 +5,16 @@ module.exports = {
 
   output: {
     filename: 'src/[name].js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '.build'),
     clean: true
   },
 
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
-      },
-      {
         test: /\.tsx?$/,
-        use: 'ts-loader',
         exclude: /node_modules/,
+        use: ['babel-loader', 'ts-loader'],
       },
       {
         test: /\.css$/,
@@ -28,7 +22,7 @@ module.exports = {
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader'],
       },
-      {
+      {// * You Need To Define Assets Here And In custom.d.ts
         test: /\.(png|jpg)$/i,
         loader: 'file-loader',
         options:  {
@@ -60,7 +54,7 @@ module.exports = {
         },
         vendor: {
           chunks: 'initial',
-          test: /[\\/]node_modules[\\/](react | react-dom | react-router-dom | styled-components)[\\/]/,
+          test: /[\\/]node_modules[\\/](react | react-dom)[\\/]/,
           name: 'vendor',
           enforce: true
         }
