@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "outDir": "./build/",
+    "baseUrl": ".",
+    
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "importHelpers": true,  
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+
+    "types": ["react/next", "react-dom/next"],
+    
+    "paths": {
+      // ! Important
+      // * To Add More Paths You Have To Added Here And In Webpack.common.js
+      "@/*": ["/*"],
+      "@Public/*": ["public/*"]
+    },
+  },
+  
+  "include": ["src/**/*.tsx", "custom.d.ts"],
+  "exclude": ["dist", "build", "node_modules"]
+}
