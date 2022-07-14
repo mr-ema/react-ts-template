@@ -1,6 +1,6 @@
 import React from 'react';
 import '@/style.css';
-import logo from '@Public/assets/github.png';
+import gitHub from '@Public/assets/animation.svg';
 
 
 const App: React.FunctionComponent = () => {
@@ -17,7 +17,7 @@ const App: React.FunctionComponent = () => {
           <h3>A Webpack + React + Typescript Template</h3>
           
           <a href='https://github.com/mr-ema/react-ts-template' target='_blank'>
-          <img style={{width: '50%', placeSelf: 'center'}} src={logo}></img>
+          <object data={gitHub} width={400} height={400} />
           </a>
 
           <a style={{

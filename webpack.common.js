@@ -5,6 +5,10 @@ module.exports = {
 
   output: {
     filename: 'src/[name].js',
+    // Base path for all the assets within your application.
+    // Ex. '/' resolve to /public/assets/github.png
+    // ! In live server extension you should change '/' to /.build/
+    publicPath: '/', // '/' | 'auto' | ASSETS_PATH
     path: path.resolve(__dirname, '.build'),
     clean: true
   },
@@ -23,7 +27,7 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {// * You Need To Define Assets Here And In custom.d.ts
-        test: /\.(png|jpg)$/i,
+        test: /\.(png|jpg|svg)$/i,
         loader: 'file-loader',
         options:  {
           // Custom Path To Save Assets When Build

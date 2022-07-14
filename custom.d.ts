@@ -1,4 +1,4 @@
-// * Declare Here Your Assets Files ( .jpg | .png | .svg )
+// * Declare Here Your Assets Files ( .jpg | .png | .svg | .mp4 )
 // * You Have To Declare Them In Webpack.common.js Too 
 
 /* declare module '*.jpg' {
@@ -6,7 +6,7 @@
   export default content;
 } */
 
-declare module '*.png' {
+declare module '*.svg' {
   const content: any;
   export default content;
 }
