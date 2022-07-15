@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
+  devtool: false,
 
   plugins: [
     new HtmlWebpackPlugin({
@@ -18,4 +19,9 @@ module.exports = merge(common, {
       ]
     }),
   ],
+  performance: {
+    hints: 'error',
+    maxEntrypointSize: 312000,
+    maxAssetSize: 312000
+}
 })

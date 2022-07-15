@@ -49,17 +49,22 @@ module.exports = {
 
   optimization: {
     splitChunks: {
+      // Join All Files With '.css' Extention Into One O More Chunks.
+      // You Can Specify The Path In The Name Property.  
       cacheGroups: {
         styles: {
-          name: 'styles',
+          name: 'styles',// Path Where The File Will Be Save
           test: /\.css$/,
           chunks: 'all',
           enforce: true
         },
-        vendor: {
-          chunks: 'initial',
-          test: /[\\/]node_modules[\\/](react | react-dom)[\\/]/,
-          name: 'vendor',
+        // You Can Add Many Vendors As You Want, 
+        // Just Remember Add The Name Separate By '|' without spaces.
+        // Or It Won't Work 
+        reactVendor: {
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          name: 'vendors/vendor-react', // Path Where The File Will Be Save
+          chunks: 'all',
           enforce: true
         }
       }
